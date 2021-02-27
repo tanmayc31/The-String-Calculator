@@ -21,5 +21,8 @@ public class TestCalculator {
 	public void singleValueReturned() {
 		assertEquals(calculator.calculate("1"), 1);
 	}
+	public void twoNumbersSumCommaDelimiter(){
+		assertEquals(calculator.calculate("1,2"),3);
+	}
 
 }
