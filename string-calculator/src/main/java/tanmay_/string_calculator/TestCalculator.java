@@ -27,5 +27,7 @@ public class TestCalculator {
 	public void twoNumbersSumNewLineDelimiter(){
 		assertEquals(calculator.calculate("1\n2"),3);
 	}
-
+	public void moreThanTwoNumbersSumBothWaysDelimiter(){
+		assertEquals(calculator.calculate("1,2,3"),6);
+	}
 }

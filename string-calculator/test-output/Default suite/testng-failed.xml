@@ -5,8 +5,8 @@
     <classes>
       <class name="tanmay_.string_calculator.TestCalculator">
         <methods>
-          <include name="singleValueReturned"/>
           <include name="init"/>
+          <include name="moreThanTwoNumbersSumBothWaysDelimiter"/>
         </methods>
       </class> <!-- tanmay_.string_calculator.TestCalculator -->
     </classes>

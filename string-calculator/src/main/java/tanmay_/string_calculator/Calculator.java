@@ -15,12 +15,16 @@ public class Calculator {
 		}
 		else {
 			
-			return addNum(numbers[0],numbers[1]);
+			return addNum(numbers);
 		}
 		}
 	
-	private int addNum(String numA, String numB) {
-		return Integer.parseInt(numA) + Integer.parseInt(numB);
+	private int addNum(String[] numbers) {
+		int sum=0;
+		for(int i=0;i<numbers.length;i++) {
+			sum +=Integer.parseInt(numbers[i]);
+		}
+		return sum;
 	}
 	
 	private boolean isEmpty(String input) {
