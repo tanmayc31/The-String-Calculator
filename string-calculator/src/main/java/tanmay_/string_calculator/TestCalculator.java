@@ -24,5 +24,8 @@ public class TestCalculator {
 	public void twoNumbersSumCommaDelimiter(){
 		assertEquals(calculator.calculate("1,2"),3);
 	}
+	public void twoNumbersSumNewLineDelimiter(){
+		assertEquals(calculator.calculate("1\n2"),3);
+	}
 
 }

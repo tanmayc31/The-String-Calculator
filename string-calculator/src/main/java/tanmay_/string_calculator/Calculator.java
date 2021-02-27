@@ -2,9 +2,9 @@ package tanmay_.string_calculator;
 
 
 public class Calculator {
-
+	private final String delimiter=",|\n";
 	public int calculate(String input) {
-		String[] numbers = input.split(",");
+		String[] numbers = input.split(delimiter);
 		
 		if(isEmpty(input)) {
 		return 0;
