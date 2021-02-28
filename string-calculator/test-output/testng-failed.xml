@@ -6,7 +6,7 @@
       <class name="tanmay_.string_calculator.TestCalculator">
         <methods>
           <include name="init"/>
-          <include name="moreThanTwoNumbersSumBothWaysDelimiter"/>
+          <include name="negetiveNumberThrowsException"/>
         </methods>
       </class> <!-- tanmay_.string_calculator.TestCalculator -->
     </classes>

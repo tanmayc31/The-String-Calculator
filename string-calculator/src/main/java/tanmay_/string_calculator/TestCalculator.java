@@ -34,4 +34,5 @@ public class TestCalculator {
 	public void negetiveNumberThrowsException() throws Exception {
 		calculator.calculate("-1");
 	}
+	
 }

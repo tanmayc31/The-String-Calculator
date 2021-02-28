@@ -20,18 +20,22 @@ public class Calculator {
 		}
 	
 	private int addNum(String[] numbers) throws Exception {
-		for (String i:numbers) {
-			if(stringToInt(i) < 0) {
-				throw new Exception("negatives not allowed");		
-			}
-		}
 		
+		negetiveNumbersInput(numbers);
 		
 		int sum=0;
 		for(int i=0;i<numbers.length;i++) {
 			sum +=Integer.parseInt(numbers[i]);
 		}
 		return sum;
+	}
+	
+	private void negetiveNumbersInput(String[] numbers) throws Exception {
+		for (String i:numbers) {
+			if(stringToInt(i) < 0) {
+				throw new Exception("negatives not allowed");		
+			}
+		}	
 	}
 	
 	private boolean isEmpty(String input) {
