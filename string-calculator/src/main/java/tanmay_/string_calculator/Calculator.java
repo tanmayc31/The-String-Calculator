@@ -2,27 +2,36 @@ package tanmay_.string_calculator;
 
 
 public class Calculator {
-	private final String delimiter=",|\n";
+	//private String delimiter=",|\n";
+	
 	public int calculate(String input) throws Exception {
-		String[] numbers = input.split(delimiter);
+		String delimiter="[,|\n";
+		
 		
 		if(isEmpty(input)) {
 		return 0;
 		}
 		if(input.length() == 1) {
-			return stringToInt(input);
-				
+			return stringToInt(input);			
 		}
-		else {
-			
-			return addNum(numbers);
-		}
+	    if(input.charAt(0)=='/') {
+			  delimiter+=input.charAt(2);
+			  input = input.replace(input.substring(0,4), "");
+		  }
+		delimiter+=']';
+		String[] numbers = input.split(delimiter);
+		
+		return addNum(numbers);
+		
 		}
 	
 	private int addNum(String[] numbers) throws Exception {
 		
 		negetiveNumbersInput(numbers);
-		
+		return calculations(numbers);
+	}
+	
+	private int calculations(String[] numbers) {
 		int sum=0;
 		for(String i:numbers) {
 			if(stringToInt(i)>1000) {
@@ -32,6 +41,7 @@ public class Calculator {
 		}
 		return sum;
 	}
+	
 	
 	private void negetiveNumbersInput(String[] numbers) throws Exception {
 		for (String i:numbers) {
@@ -49,5 +59,6 @@ public class Calculator {
 	private int stringToInt(String input) {
 		return Integer.parseInt(input);
 	}
-
+	
 }
+

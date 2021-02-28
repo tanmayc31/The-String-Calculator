@@ -15,6 +15,7 @@ public class TestCalculator {
 		calculator = new Calculator();
 		
 	}
+	
 	public void emptyStringReturnsZero() throws Exception {
 		assertEquals(calculator.calculate(""), 0);
 	}
@@ -37,5 +38,7 @@ public class TestCalculator {
 	public void ignoreNumberGreaterThan1000() throws Exception{
 		assertEquals(calculator.calculate("2,1001"),2);
 	}
-	
+	public void diffDelimiter() throws Exception{
+		assertEquals(calculator.calculate("//;\n1;2"),3);
+	}
 }
