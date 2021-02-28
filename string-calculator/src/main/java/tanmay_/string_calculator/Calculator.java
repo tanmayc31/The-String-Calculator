@@ -3,7 +3,7 @@ package tanmay_.string_calculator;
 
 public class Calculator {
 	private final String delimiter=",|\n";
-	public int calculate(String input) {
+	public int calculate(String input) throws Exception {
 		String[] numbers = input.split(delimiter);
 		
 		if(isEmpty(input)) {
@@ -19,7 +19,14 @@ public class Calculator {
 		}
 		}
 	
-	private int addNum(String[] numbers) {
+	private int addNum(String[] numbers) throws Exception {
+		for (String i:numbers) {
+			if(stringToInt(i) < 0) {
+				throw new Exception("negatives not allowed");		
+			}
+		}
+		
+		
 		int sum=0;
 		for(int i=0;i<numbers.length;i++) {
 			sum +=Integer.parseInt(numbers[i]);

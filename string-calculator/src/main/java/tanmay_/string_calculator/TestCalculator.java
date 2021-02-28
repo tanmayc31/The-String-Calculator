@@ -15,19 +15,23 @@ public class TestCalculator {
 		calculator = new Calculator();
 		
 	}
-	public void emptyStringReturnsZero() {
+	public void emptyStringReturnsZero() throws Exception {
 		assertEquals(calculator.calculate(""), 0);
 	}
-	public void singleValueReturned() {
+	public void singleValueReturned() throws Exception {
 		assertEquals(calculator.calculate("1"), 1);
 	}
-	public void twoNumbersSumCommaDelimiter(){
+	public void twoNumbersSumCommaDelimiter() throws Exception{
 		assertEquals(calculator.calculate("1,2"),3);
 	}
-	public void twoNumbersSumNewLineDelimiter(){
+	public void twoNumbersSumNewLineDelimiter() throws Exception{
 		assertEquals(calculator.calculate("1\n2"),3);
 	}
-	public void moreThanTwoNumbersSumBothWaysDelimiter(){
+	public void moreThanTwoNumbersSumBothWaysDelimiter() throws Exception{
 		assertEquals(calculator.calculate("1,2,3"),6);
+	}
+	@Test(expectedExceptions=Exception.class)
+	public void negetiveNumberThrowsException() throws Exception {
+		calculator.calculate("-1");
 	}
 }
